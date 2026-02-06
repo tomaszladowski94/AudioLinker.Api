@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36511.14 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioLinker.Api", "AudioLinker.Api\AudioLinker.Api.csproj", "{84408CFC-1767-4905-9DAC-5B9430D93BCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioLinker.Api.Tests", "AudioLinker.Api.Tests\AudioLinker.Api.Tests.csproj", "{E4381F48-70D1-4988-AED6-1F7D681E9670}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84408CFC-1767-4905-9DAC-5B9430D93BCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84408CFC-1767-4905-9DAC-5B9430D93BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84408CFC-1767-4905-9DAC-5B9430D93BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84408CFC-1767-4905-9DAC-5B9430D93BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4381F48-70D1-4988-AED6-1F7D681E9670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4381F48-70D1-4988-AED6-1F7D681E9670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4381F48-70D1-4988-AED6-1F7D681E9670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4381F48-70D1-4988-AED6-1F7D681E9670}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {330E6721-A084-4609-B7C2-C441B333C1D4}
+	EndGlobalSection
+EndGlobal
