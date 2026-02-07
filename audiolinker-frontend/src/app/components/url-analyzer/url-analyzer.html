@@ -1,0 +1,10 @@
+<div class="analyzer">
+  <input [(ngModel)]="url" placeholder="Paste YouTube URL" />
+  <button (click)="analyze()">Analyze</button>
+
+  <div *ngIf="result" class="result">
+    <p><strong>Is YouTube Link:</strong> {{ result.isYouTubeLink }}</p>
+    <p><strong>Video ID:</strong> {{ result.videoId }}</p>
+    <p><strong>Message:</strong> {{ result.message }}</p>
+  </div>
+</div>
