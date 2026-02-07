@@ -22,9 +22,32 @@ namespace AudioLinker.Api.Tests
 
             // Assert
             Assert.NotNull(result);
-            var response = result!.Value as AnalyzeResponse;
+            var response = result.Value as AnalyzeResponse;
             Assert.NotNull(response);
-            Assert.True(response!.IsYouTubeLink);
+            Assert.True(response.IsYouTubeLink);
+            Assert.Equal("dQw4w9WgXcQ", response.VideoId);
+        }
+
+        [Fact]
+        public void Post_YouTubeLinkWithoutVideoId_ReturnsIncorrectMessage()
+        {
+            // Arrange
+            var controller = new AnalyzeController();
+            var request = new AnalyzeRequest
+            {
+                Url = "https://www.youtube.com/watch?dQw4w9WgXcQ"
+            };
+
+            // Act
+            var result = controller.Post(request) as OkObjectResult;
+
+            // Assert
+            Assert.NotNull(result);
+            var response = result.Value as AnalyzeResponse;
+            Assert.NotNull(response);
+            Assert.True(response.IsYouTubeLink);
+            Assert.Null(response.VideoId);
+            Assert.Equal("Incorrect YouTube link", response.Message);
         }
 
         [Fact]
@@ -42,8 +65,9 @@ namespace AudioLinker.Api.Tests
 
             // Assert
             Assert.NotNull(result);
-            var response = result!.Value as AnalyzeResponse;
-            Assert.False(response!.IsYouTubeLink);
+            var response = result.Value as AnalyzeResponse;
+            Assert.NotNull(response);
+            Assert.False(response.IsYouTubeLink);
             Assert.Null(response.VideoId);
         }
 
