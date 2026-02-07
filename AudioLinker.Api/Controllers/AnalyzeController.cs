@@ -38,7 +38,7 @@ namespace AudioLinker.Api.Controllers
             {
                 IsYouTubeLink = isYouTube,
                 VideoId = videoId,
-                Message = isYouTube ? "Poprawny link YouTube" : "To nie jest link YouTube"
+                Message = isYouTube && videoId != null ? "Correct YouTube link" : "Incorrect YouTube link"
             };
 
             return Ok(response);
